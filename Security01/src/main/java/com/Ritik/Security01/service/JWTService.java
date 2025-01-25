@@ -4,7 +4,6 @@ package com.Ritik.Security01.service;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;
 import org.springframework.stereotype.Service;
-
 import javax.crypto.KeyGenerator;
 import javax.crypto.SecretKey;
 import java.security.Key;
@@ -39,6 +38,8 @@ public class JWTService {
                 .and()
                 .signWith(getKey())
                 .compact();
+
+        //Now validate Token.. 2:40:00p
     }
 
     private Key getKey() {

@@ -30,6 +30,11 @@ public class userController {
         return " 'CLOSED' Closed resource cannot access without log in";
     }
 
+    @GetMapping("/register")
+    public String register(){
+        return "GET register page";
+    }
+
     @PostMapping("/register")
     public AppUsers register(@RequestBody AppUsers appUsers) {
         return service.register(appUsers);
